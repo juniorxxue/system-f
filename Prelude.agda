@@ -13,6 +13,8 @@ open import Data.Product using (_×_; proj₁; proj₂; ∃; ∃-syntax) renamin
 open import Data.List using (List; []; _∷_; _++_; reverse; map; foldr; downFrom) renaming (length to len) public
 open import Data.List.Properties using (map-++) public
 open import Data.Maybe using (Maybe; just; nothing) renaming (map to mmap) public
+open import Data.Fin using (Fin; punchIn; punchOut) renaming (zero to #0; suc to #S; pred to #pred) public
+open import Data.Fin.Properties using () renaming (<-cmp to #<-cmp; _≟_ to _#≟_) public
 
 m+1≤n→m≤n : ∀ {m n}
   → suc m ≤ n
